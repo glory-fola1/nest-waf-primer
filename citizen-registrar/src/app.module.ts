@@ -10,4 +10,3 @@ import { CitizenRegistrationModule } from './citizen-registration/citizen-regist
   providers: [AppService],
 })
 export class AppModule { }
-320
