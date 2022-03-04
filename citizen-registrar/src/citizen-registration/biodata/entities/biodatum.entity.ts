@@ -1,3 +1,4 @@
+import { Linkedidentity } from '../../linkedidentity/entities/linkedidentity.entity';
 import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 
 
@@ -35,6 +36,9 @@ export class Biodatum {
 
     @Column()
     profession: string;
-    LinkedIdentity: any;
+    
+    @JoinColumn()
+    @OneToOne(type => Linkedidentity, linkedidentity => linkedidentity.biodata, {cascade: true})
+    linkedIdentity: Linkedidentity;
 
 }

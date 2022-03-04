@@ -10,24 +10,25 @@ export class BiodataService {
   constructor(
     @InjectRepository(Biodatum)
     private BiodataRepository: Repository<Biodatum>
-  ){}
-  create(createBiodatumDto: CreateBiodatumDto) {
+  ) { }
+
+  async create(createBiodatumDto: CreateBiodatumDto) {
     return 'This action adds a new biodatum';
   }
 
-  findAll() {
+  async findAll() {
     return `This action returns all biodata`;
   }
 
-  findOne(id: number) {
+  async findOne(id: number) {
     return `This action returns a #${id} biodatum`;
   }
 
-  update(id: number, updateBiodatumDto: UpdateBiodatumDto) {
+  async update(id: number, updateBiodatumDto: UpdateBiodatumDto) {
     return `This action updates a #${id} biodatum`;
   }
 
-  remove(id: number) {
+  async remove(id: number) {
     return `This action removes a #${id} biodatum`;
   }
 }
