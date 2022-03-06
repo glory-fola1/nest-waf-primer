@@ -13,22 +13,28 @@ export class BiodataService {
   ) { }
 
   async create(createBiodatumDto: CreateBiodatumDto) {
-    return 'This action adds a new biodatum';
+    const newBiodata: Biodatum = this.BiodataRepository.create(createBiodatumDto)
+    return this.BiodataRepository.save(newBiodata);
+    //return 'This action adds a new biodatum';
   }
 
   async findAll() {
-    return `This action returns all biodata`;
+    return await this.BiodataRepository.find();
+    //return `This action returns all biodata`;
   }
 
   async findOne(id: number) {
-    return `This action returns a #${id} biodatum`;
+    return await this.BiodataRepository.findOne(id);
+    //return `This action returns a #${id} biodatum`;
   }
 
   async update(id: number, updateBiodatumDto: UpdateBiodatumDto) {
-    return `This action updates a #${id} biodatum`;
+    return await this.BiodataRepository.update(id, updateBiodatumDto);
+    //return `This action updates a #${id} biodatum`;
   }
 
   async remove(id: number) {
-    return `This action removes a #${id} biodatum`;
+    return await this.BiodataRepository.delete(id);
+    //return `This action removes a #${id} biodatum`;
   }
 }

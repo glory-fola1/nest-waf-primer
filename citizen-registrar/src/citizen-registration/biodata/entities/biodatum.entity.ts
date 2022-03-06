@@ -38,7 +38,7 @@ export class Biodatum {
     profession: string;
     
     @JoinColumn()
-    @OneToOne(type => Linkedidentity, linkedidentity => linkedidentity.biodata, {cascade: true})
-    linkedIdentity: Linkedidentity;
+    @OneToOne(type => Linkedidentity, linkedidentity => linkedidentity.biodata)
+    linkedidentity: Linkedidentity;
 
 }

@@ -11,5 +11,5 @@ export class CreateBiodatumDto {
     readonly townOfbirth: string;
     readonly ResidenceAddress: string;
     readonly Profession: string;
-    static Linkedidentity: CreateLinkedidentityDto;
+    readonly Linkedidentity: CreateLinkedidentityDto;
 }

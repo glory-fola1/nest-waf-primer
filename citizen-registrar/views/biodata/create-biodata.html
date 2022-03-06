@@ -6,7 +6,7 @@
     <div class="navigation-bar grid-item-row-1">
         <div class="navigation-bar-left">
             <div>
-                <a href="/" >Home</a>
+                <a href="/">Home</a>
             </div>
             <div>
                 <a href="/about-us">About Us</a>
@@ -29,7 +29,8 @@
                 <div class="field">
                     <label class="label">First name:</label>
                     <div class="control has-icons-right">
-                        <input class="input" id="firstName" name="firstName" type="text" placeholder="First name" required>
+                        <input class="input" id="firstName" name="firstName" type="text" placeholder="First name"
+                            required>
                     </div>
                 </div>
                 <div class="field">
@@ -47,7 +48,8 @@
                 <div class="field">
                     <label class="label">dateOfBirth:</label>
                     <div class="control has-icons-right">
-                        <input class="input" id="dateOfBirth" name="dateOfBirth" type="date" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" placeholder="yyyy-mm-dd" placeholder="dateOfBirth">
+                        <input class="input" id="dateOfBirth" name="dateOfBirth" type="date" required
+                            pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" placeholder="yyyy-mm-dd" placeholder="dateOfBirth">
                     </div>
                 </div>
                 <div class="field">
@@ -65,24 +67,52 @@
                 <div class="field">
                     <label class="label">ResidenceAddress:</label>
                     <div class="control has-icons-right">
-                        <input class="input" id="Residenceaddress" name="Residenceaddress" type="text" placeholder="Residenceaddress">
+                        <input class="input" id="ResidenceAddress" name="Residenceaddress" type="text"
+                            placeholder="ResidenceAddress">
                     </div>
                 </div>
                 <div class="field">
                     <label class="label">stateOfbirth:</label>
                     <div class="control has-icons-right">
-                        <input class="input" id="stateOfbirth" name="stateOfbirth" type="text" placeholder="stateOfbirth">
+                        <input class="input" id="stateOfbirth" name="stateOfbirth" type="text"
+                            placeholder="stateOfbirth">
                     </div>
-                    <div class="field">
-                        <label class="label">townOfbirth:</label>
+                </div>
+                <div class="field">
+                    <label class="label">townOfbirth:</label>
+                    <div class="control has-icons-right">
+                        <input class="input" id="townOfbirth" name="townOfbirth" type="text"
+                            placeholder="townOfbirth">
+                    </div>
+                </div>
+                <div class="field">
+                        <label class="label">Profession:</label>
                         <div class="control has-icons-right">
-                            <input class="input" id="townOfbirth" name="townOfbirth" type="text" placeholder="townOfbirth">
+                            <input class="input" id="Profession" name="Profession" type="text"
+                                placeholder="Profession">
                         </div>
-                        <div class="field">
-                            <label class="label">Profession:</label>
-                            <div class="control has-icons-right">
-                                <input class="input" id="Profession" name="Profession" type="text" placeholder="Profession">
-                            </div>
+                </div>
+                <div class="field">
+                    <label class="label">NIN:</label>
+                    <div class="control has-icons-right">
+                        <input class="input" id="NIN" name="NIN" type="text"
+                            placeholder="NIN">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">BVN:</label>
+                    <div class="control has-icons-right">
+                        <input class="input" id="BVN" name="BVN" type="text"
+                            placeholder="BVN">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">MobileNumber:</label>
+                    <div class="control has-icons-right">
+                        <input class="input" id="MobileNumber" name="MobileNumber" type="text"
+                            placeholder="MobileNumber">
+                    </div>
+                </div>
                 
                 <div class="field is-grouped">
                     <div class="control">
@@ -94,7 +124,7 @@
                 </div>
             </fieldset>
         </form>
-        
+
     </div>
 </div>
 
@@ -119,81 +149,98 @@
     const CitizenNINForm = document.getElementById('CitizenNINForm');
 
     CitizenNINForm.addEventListener('submit', (event) => {
-    event.preventDefault();
+        event.preventDefault();
 
-    //Get fields and check validities
-    const firstName = document.getElementById('firstName').value;
-    if (firstName == '') {
-        firstName.reportValidity();
-        return false;
-    }
+        //Get fields and check validities
+        const firstName = document.getElementById('firstName').value;
+        if (firstName == '') {
+            firstName.reportValidity();
+            return false;
+        }
 
-    const middleName = document.getElementById('middleName').value;
-    
-    const lastName = document.getElementById('lastName').value;
-    if (lastName == '') {
-        lastName.reportValidity();
-        return false;
-    }
+        const middleName = document.getElementById('middleName').value;
 
-    const countryOfBirth = document.getElementById('countryOfbirth').value;
-    if (countryOfBirth == '') {
-        countryOfBirth.reportValidity();
-        return false;
-    }
+        const lastName = document.getElementById('lastName').value;
+        if (lastName == '') {
+            lastName.reportValidity();
+            return false;
+        }
 
-    const dateOfBirth = document.getElementById('dateOfBirth').value;
-    if (dateOfBirth == '') {
-        dateOfBirth.reportValidity();
-        return false;
-    }
-    
-    const nationality = document.getElementById('nationality').value;
-    const stateOfbirth = document.getElementById('stateOfbirth').value;
-    const townOfbirth = document.getElementById('townOfbirth').value;
-    const Profession = document.getElementById('Profession').value;
-    const Residenceaddress = document.getElementById('Residenceaddress').value;
+        const dateOfBirth = document.getElementById('dateOfBirth').value;
+        if (dateOfBirth == '') {
+            dateOfBirth.reportValidity();
+            return false;
+        }
+
+        const nationality = document.getElementById('nationality').value;
+
+        const countryOfBirth = document.getElementById('countryOfbirth').value;
+        if (countryOfBirth == '') {
+            countryOfBirth.reportValidity();
+            return false;
+        }
+
+        const stateOfbirth = document.getElementById('stateOfbirth').value;
+        const townOfbirth = document.getElementById('townOfbirth').value;
+        const ResidenceAddress = document.getElementById('ResidenceAddress').value;
+        const Profession = document.getElementById('Profession').value;
 
 
-    //start the button spinner
-    document.getElementById("submitCitizenNINForm").classList.add("is-loading");
+        //start the button spinner
+        document.getElementById("submitCitizenNINForm").classList.add("is-loading");
 
-    //prepare init for fetch
-    const init = {
-        method: 'Post',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        //credentials: 'same-origin',
-        body: JSON.stringify({ firstName, middleName, lastName, townOfbirth, dateOfBirth, nationality, Residenceaddress, countryOfBirth, stateOfbirth, Profession })
-    }
+        //prepare init for fetch
+        const init = {
+            method: 'Post',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            //credentials: 'same-origin',
+            body: JSON.stringify({
+                "NIN": NIN,
+                "BVN": BVN,
+                "MobileNumber": MobileNumber,
+                "biodatum": {
+                    "firstName": firstName,
+                    "middleName": middleName,
+                    "lastName": lastName,
+                    "dateOfBirth": dateOfBirth,
+                    "Nationality": Nationality,
+                    "countryOfBirth": countryOfBirth,
+                    "stateOfbirth": stateOfbirth,
+                    "townOfbirth": townOfbirth,
+                    "ResidenceAddress": ResidenceAddress,
+                    "Profession": Profession
+                }
+            })
+        }
 
-    //call fetch
-    fetch('/biodata', init)
-        .then(response => response.json())
-        .then(data => {
-            //alert(JSON.stringify(data))
-            //remove spinner class
-            document.getElementById("submitCitizenNINForm").classList.remove("is-loading");
-            //set notification
-            document.getElementById("notificationMessage").innerHTML = 'User creation successful';
-            //add notification color class sent
-            document.getElementById("notification").classList.add("is-success");
-            //remove is-hidden from notificationWrapper
-            document.getElementById("notification").classList.remove("is-hidden");
+        //call fetch
+        fetch('/biodata', init)
+            .then(response => response.json())
+            .then(data => {
+                //alert(JSON.stringify(data))
+                //remove spinner class
+                document.getElementById("submitCitizenNINForm").classList.remove("is-loading");
+                //set notification
+                document.getElementById("notificationMessage").innerHTML = 'User creation successful';
+                //add notification color class sent
+                document.getElementById("notification").classList.add("is-success");
+                //remove is-hidden from notificationWrapper
+                document.getElementById("notification").classList.remove("is-hidden");
 
-        })
-        .catch(error => {
-            //remove spinner class
-            document.getElementById("submitCitizenNINForm").classList.remove("is-loading");
+            })
+            .catch(error => {
+                //remove spinner class
+                document.getElementById("submitCitizenNINForm").classList.remove("is-loading");
 
-            document.getElementById("notificationMessage").innerHTML = error.message;
-            //add notification color class sent
-            document.getElementById("notification").classList.add("is-danger");
-            //remove is-hidden from notificationWrapper
-            document.getElementById("notification").classList.remove("is-hidden");
+                document.getElementById("notificationMessage").innerHTML = error.message;
+                //add notification color class sent
+                document.getElementById("notification").classList.add("is-danger");
+                //remove is-hidden from notificationWrapper
+                document.getElementById("notification").classList.remove("is-hidden");
 
-        });
+            });
     })
 
 </script>

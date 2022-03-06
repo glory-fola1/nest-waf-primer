@@ -5,19 +5,19 @@ import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from "ty
 @Entity()
 export class Linkedidentity {
     @PrimaryGeneratedColumn()
-    id1: number;
+    id: number;
 
     @Column()
-    nationalIdentityNumber: number;
+    NIN: number;
 
     @Column()
-    bankVerificationNumber: number;
+    BVN: number;
 
     @Column({ nullable: true })
-    mobileNumber: number;
+    MobileNumber: number;
 
     @JoinColumn()
-    @OneToOne(type=> Biodatum, biodata => biodata.linkedIdentity, {cascade: true})
+    @OneToOne(type=> Biodatum, biodata => biodata.linkedidentity, {cascade: true})
     biodata: Biodatum;
 
 }
