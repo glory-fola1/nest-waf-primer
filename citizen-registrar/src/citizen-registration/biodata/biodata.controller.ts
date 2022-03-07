@@ -9,6 +9,7 @@ export class BiodataController {
 
   @Post()
   create(@Body() createBiodatumDto: CreateBiodatumDto) {
+    console.log(JSON.stringify(createBiodatumDto))
     return this.biodataService.create(createBiodatumDto);
   }
 

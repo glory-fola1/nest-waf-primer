@@ -5,11 +5,11 @@ export class CreateBiodatumDto {
     readonly middleName?: string;
     readonly lastName: string;
     readonly dateOfbirth: Date;
-    readonly Nationality: string;
+    readonly nationality: string;
     readonly countryOfbirth: string;
     readonly stateOfbirth: string;
     readonly townOfbirth: string;
-    readonly ResidenceAddress: string;
-    readonly Profession: string;
-    readonly Linkedidentity: CreateLinkedidentityDto;
+    readonly residenceAddress: string;
+    readonly profession: string;
+    readonly linkedIdentity: CreateLinkedidentityDto;
 }
